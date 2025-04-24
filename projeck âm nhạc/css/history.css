@@ -1,0 +1,464 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0f0f1a;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00b7ff;
+    background-color: #2a2a3e;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a3e;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: #fff;
+    outline: none;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn {
+    background-color: #00b7ff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.clear-btn {
+    background-color: transparent;
+    border: 1px solid #00b7ff;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
+    width: 60px;
+    background-color: #0f0f1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar ul li {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.sidebar ul li:hover {
+    color: #00b7ff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 80px;
+    padding: 40px;
+    flex: 1;
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #00b7ff;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 20px;
+}
+
+.music-item {
+    text-align: center;
+}
+
+.music-item img {
+    width: 100%;
+    aspect-ratio: 1/1; 
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.music-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.music-item p:last-child {
+    color: #888;
+    font-size: 12px;
+}
+
+ /* Footer Section */
+ .footer {
+    padding: 40px 20px;
+    background-color: #1a2a44;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00ddeb;
+    margin-right: 10px;
+}
+
+.footer-logo h1 {
+    font-size: 24px;
+    color: #00ddeb;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: #00ddeb;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #00ddeb;
+    padding-bottom: 5px;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #a0a0a0;
+    line-height: 1.5;
+}
+
+.app-links img {
+    width: 120px;
+    margin: 5px 0;
+}
+
+.subscribe-form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #a0a0a0;
+    background-color: #ffffff;
+    color: #000;
+    border-radius: 5px;
+}
+
+.subscribe-form button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #00ddeb;
+    background-color: transparent;
+    color: #00ddeb;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.contact-info img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links img {
+    width: 20px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #a0a0a0;
+}
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+.sidebar {
+width: 100%;
+height: auto;
+position: static;
+flex-direction: row;
+justify-content: space-around;
+padding: 10px;
+}
+
+.sidebar .logo {
+margin-bottom: 0;
+}
+
+.sidebar .icon {
+margin: 0 10px;
+}
+
+.main-content {
+margin-left: 0;
+width: 100%;
+padding: 10px;
+}
+
+.top-bar {
+flex-direction: column;
+gap: 10px;
+}
+
+.search-container {
+width: 100%;
+}
+
+.search-bar {
+width: 80%;
+}
+
+.top-bar .buttons {
+justify-content: center;
+flex-wrap: wrap;
+}
+
+.table-container table {
+font-size: 14px;
+}
+
+th, td {
+padding: 8px;
+}
+
+.carousel-item {
+width: 120px;
+}
+
+.carousel-item img {
+height: 120px;
+}
+
+.footer-content {
+flex-direction: column;
+align-items: center;
+}
+
+.footer-column {
+min-width: 100%;
+text-align: center;
+}
+
+.app-links img {
+width: 100px;
+}
+}
+
+/* Responsive Design for Mobile  */
+@media (max-width: 480px) {
+.sidebar {
+padding: 5px;
+}
+
+.sidebar .logo {
+font-size: 20px;
+}
+
+.sidebar .icon {
+font-size: 16px;
+margin: 0 5px;
+}
+
+.main-content {
+padding: 5px;
+}
+
+.search-bar {
+width: 100%;
+font-size: 14px;
+}
+
+.top-bar .buttons button {
+padding: 6px 15px;
+font-size: 12px;
+}
+
+.table-container h2 {
+font-size: 16px;
+}
+
+table {
+font-size: 12px;
+}
+
+th, td {
+padding: 5px;
+}
+
+.remove-btn {
+width: 16px;
+height: 16px;
+font-size: 12px;
+}
+
+.view-more {
+padding: 8px 30px;
+font-size: 14px;
+}
+
+.recently-played h2 {
+font-size: 16px;
+}
+
+.carousel-item {
+width: 100px;
+}
+
+.carousel-item img {
+height: 100px;
+}
+
+.carousel-item p {
+font-size: 12px;
+}
+
+.carousel-item p.artist {
+font-size: 10px;
+}
+
+.carousel-nav {
+padding: 5px;
+font-size: 14px;
+}
+
+.footer {
+padding: 20px 10px;
+}
+
+.footer-logo h1 {
+font-size: 20px;
+}
+
+.footer-column h3 {
+font-size: 16px;
+}
+
+.footer-column p {
+font-size: 12px;
+}
+
+.subscribe-form input {
+padding: 8px;
+font-size: 12px;
+}
+
+.subscribe-form button {
+padding: 8px 15px;
+font-size: 12px;
+}
+
+.contact-info p {
+font-size: 12px;
+}
+
+.social-links img {
+width: 16px;
+}
+
+.copyright {
+font-size: 10px;
+}
+}
